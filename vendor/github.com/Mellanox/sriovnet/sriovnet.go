@@ -432,7 +432,7 @@ func GetVfIndexByPciAddress(vfPciAddress string) (int, error) {
 // GetNetDevicesFromPci gets a PCI address (e.g '0000:03:00.1') and
 // returns the correlate list of netdevices
 func GetNetDevicesFromPci(pciAddress string) ([]string, error) {
-	pciDir := filepath.Join(PciSysDir, pciAddress, "net")
+	pciDir := filepath.Join(PciSysDir, pciAddress, "virtio6/net")
 	_, err := utilfs.Fs.Stat(pciDir)
 	if err != nil {
 		return nil, fmt.Errorf("cannot get a network device with pci address %v %v", pciAddress, err)
