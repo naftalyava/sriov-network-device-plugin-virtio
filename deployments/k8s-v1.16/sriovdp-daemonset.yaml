@@ -29,13 +29,13 @@ spec:
       nodeSelector:
         beta.kubernetes.io/arch: amd64
       tolerations:
-      - key: node-role.kubernetes.io/master
+      - key: node-role.kubernetes.io/control-plane
         operator: Exists
         effect: NoSchedule
       serviceAccountName: sriov-device-plugin
       containers:
       - name: kube-sriovdp
-        image: ghcr.io/k8snetworkplumbingwg/sriov-network-device-plugin:v3.4.0
+        image: navadiaev/sriov-network-device-plugin:latest
         imagePullPolicy: IfNotPresent
         args:
         - --log-dir=sriovdp
