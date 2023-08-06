@@ -27,6 +27,7 @@ spec:
     spec:
       hostNetwork: true
       nodeSelector:
+        k8s.ovn.org/dpu-host: ""
         beta.kubernetes.io/arch: amd64
       tolerations:
       - key: node-role.kubernetes.io/control-plane

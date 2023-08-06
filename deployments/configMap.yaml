@@ -7,11 +7,12 @@ data:
   config.json: |
     {
         "resourceList": [{
-                "resourceName": "sriov_virtio",
+                "resourceName": "virtio_sriov",
+                "resourcePrefix": "navadiaev.com",
                 "selectors": {
                     "vendors": ["1af4"],
                     "devices": ["1041"],
-                    "drivers": ["virtio-pci"],
+                    "drivers": ["virtio-pci"]
                 }
             }
         ]
